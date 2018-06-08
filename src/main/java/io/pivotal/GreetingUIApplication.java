@@ -10,7 +10,6 @@ import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-@EnableCircuitBreaker
 public class GreetingUIApplication {
 
     @Bean

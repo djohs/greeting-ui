@@ -1,6 +1,5 @@
 package io.pivotal.fortune;
 
-import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
@@ -18,7 +17,6 @@ public class FortuneService {
     this.restTemplate = restTemplate;
   }
 
-  @HystrixCommand(fallbackMethod = "defaultFortune")
   public String getFortune() {
     String fortune = restTemplate.getForObject("http://fortune-service", String.class);
     return fortune;

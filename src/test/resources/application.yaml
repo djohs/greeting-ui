@@ -1,0 +1,8 @@
+stubrunner:
+  idsToServiceIds:
+    fortune-service: somenameforproducer
+eureka:
+  client:
+    enabled: false
+
+
